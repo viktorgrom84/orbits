@@ -13,7 +13,6 @@ const io = socketIo(server, {
 
 io.on("connection", (socket) => {
   socket.on("data", function (data) {
-    console.log("data", data);
     getApiAndEmit(socket, data);
   });
 
